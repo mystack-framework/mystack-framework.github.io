@@ -1,0 +1,14 @@
+{
+  "name": "MyStack Framework",
+  "short_name": "MyStack",
+  "description": "Official MyStack Framework documentation and API portal.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#050a11",
+  "theme_color": "#07111f",
+  "icons": [
+    { "src": "/icon.png", "sizes": "400x400", "type": "image/png", "purpose": "any" }
+  ]
+}

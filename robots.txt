@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mystack-framework.github.io/sitemap.xml
+
