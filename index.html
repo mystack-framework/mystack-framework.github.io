@@ -6,6 +6,7 @@
   <meta name="description" content="MyStack is a versionless, zero-Composer PHP framework with a self-contained browser runtime, enterprise security, observability and developer tooling.">
   <meta name="author" content="Sakibur Rahman (sakibweb)">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1">
   <meta name="application-name" content="MyStack Framework">
   <link rel="canonical" href="https://mystack-framework.github.io/">
@@ -30,9 +31,10 @@
   <meta name="twitter:image:alt" content="MyStack — One stack. Complete applications.">
   <title>MyStack Framework — One stack. Complete applications.</title>
   <link rel="icon" href="icon.png">
+  <link rel="preload" href="styles.css" as="style">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://mystack-framework.github.io/#organization","name":"MyStack Framework","url":"https://mystack-framework.github.io/","founder":{"@type":"Person","name":"Sakibur Rahman","alternateName":"sakibweb","url":"https://github.com/sakibweb"},"sameAs":["https://github.com/mystack-framework","https://github.com/mystack-framework/mystack","https://github.com/mystack-framework/mystack-extension"]},{"@type":"WebSite","@id":"https://mystack-framework.github.io/#website","url":"https://mystack-framework.github.io/","name":"MyStack Framework","description":"Official documentation and framework portal for MyStack.","publisher":{"@id":"https://mystack-framework.github.io/#organization"},"inLanguage":"en"},{"@type":"SoftwareSourceCode","@id":"https://mystack-framework.github.io/#software","name":"MyStack Framework","alternateName":"MyStack","description":"A versionless, zero-Composer PHP application framework with a self-contained browser runtime, security, data, UI, integration and observability layers.","codeRepository":"https://github.com/mystack-framework/mystack","url":"https://mystack-framework.github.io/","programmingLanguage":["PHP","JavaScript","CSS","HTML"],"runtimePlatform":"PHP 8","license":"https://www.apache.org/licenses/LICENSE-2.0","isAccessibleForFree":true,"author":{"@type":"Person","name":"Sakibur Rahman","alternateName":"sakibweb"},"publisher":{"@id":"https://mystack-framework.github.io/#organization"}},{"@type":"SoftwareApplication","name":"MyStack Framework Helper","applicationCategory":"DeveloperApplication","operatingSystem":"Windows, macOS, Linux","url":"https://github.com/mystack-framework/mystack-extension","downloadUrl":"https://github.com/mystack-framework/mystack-extension","isAccessibleForFree":true,"publisher":{"@id":"https://mystack-framework.github.io/#organization"}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://mystack-framework.github.io/#organization","name":"MyStack Framework","url":"https://mystack-framework.github.io/","founder":{"@type":"Person","name":"Sakibur Rahman","alternateName":"sakibweb","url":"https://github.com/sakibweb"},"sameAs":["https://github.com/mystack-framework","https://github.com/mystack-framework/mystack","https://github.com/mystack-framework/mystack-extension"]},{"@type":"WebSite","@id":"https://mystack-framework.github.io/#website","url":"https://mystack-framework.github.io/","name":"MyStack Framework","description":"Official documentation and framework portal for MyStack.","publisher":{"@id":"https://mystack-framework.github.io/#organization"},"inLanguage":"en"},{"@type":"SoftwareSourceCode","@id":"https://mystack-framework.github.io/#software","name":"MyStack Framework","alternateName":"MyStack","description":"A versionless, zero-Composer PHP application framework with a self-contained browser runtime, security, data, UI, integration and observability layers.","codeRepository":"https://github.com/mystack-framework/mystack","url":"https://mystack-framework.github.io/","programmingLanguage":["PHP","JavaScript","CSS","HTML"],"runtimePlatform":"PHP 8","license":"https://www.apache.org/licenses/LICENSE-2.0","isAccessibleForFree":true,"author":{"@type":"Person","name":"Sakibur Rahman","alternateName":"sakibweb"},"publisher":{"@id":"https://mystack-framework.github.io/#organization"}},{"@type":"SoftwareApplication","name":"MyStack Framework Helper","applicationCategory":"DeveloperApplication","operatingSystem":"Windows, macOS, Linux","url":"https://github.com/mystack-framework/mystack-extension","downloadUrl":"https://github.com/mystack-framework/mystack-extension","isAccessibleForFree":true,"publisher":{"@id":"https://mystack-framework.github.io/#organization"}},{"@type":"FAQPage","@id":"https://mystack-framework.github.io/#faq","inLanguage":"en","mainEntity":[{"@type":"Question","name":"What is MyStack?","acceptedAnswer":{"@type":"Answer","text":"A complete, zero-Composer PHP application framework: routing, security, database, UI, browser runtime, auth, payments, realtime, AI and observability in one folder."}},{"@type":"Question","name":"Do I need Composer or NPM?","acceptedAnswer":{"@type":"Answer","text":"No. Zero runtime dependencies — no build step, no lockfiles, no transitive surprises."}},{"@type":"Question","name":"Will MyStack run on shared hosting?","acceptedAnswer":{"@type":"Answer","text":"Yes — that is the primary design target: cPanel/LiteSpeed, subfolder installs, portable paths and an .htaccess guard."}},{"@type":"Question","name":"Is MyStack free for commercial use?","acceptedAnswer":{"@type":"Answer","text":"Yes — Apache License 2.0 for the framework, MIT for the VS Code extension. Preserve the license and NOTICE, and identify modifications."}},{"@type":"Question","name":"Who maintains MyStack?","acceptedAnswer":{"@type":"Answer","text":"Sakibur Rahman (sakibweb) — 5+ years of continuous development and testing, with full manuals in Bangla and English."}},{"@type":"Question","name":"Can AI tools use MyStack safely?","acceptedAnswer":{"@type":"Answer","text":"Yes — every public signature is machine-indexed from source, all AI crawlers are explicitly allowed, and the agent contract forbids invented APIs."}}]}]}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -40,24 +42,28 @@
   <div class="pointer-glow" data-pointer-glow aria-hidden="true"></div>
   <header class="site-header" data-header>
     <nav class="nav shell" aria-label="Primary navigation">
-      <a class="brand" href="#top" aria-label="MyStack home"><span class="brand-mark">M</span><span>MyStack</span></a>
+      <a class="brand" href="#top" aria-label="MyStack home"><span class="brand-mark"><img src="icon.png" alt=""></span><span>MyStack</span></a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-button>Menu</button>
       <div class="nav-links" id="site-menu" data-menu>
         <a href="#capabilities">Capabilities</a>
         <a href="#libraries">Libraries</a>
         <a href="#workflow">Workflow</a>
         <a href="#extension">Extension</a>
+        <a href="#easy">Get started</a>
         <a href="docs/">Documentation</a>
         <a href="https://github.com/mystack-framework/mystack">GitHub</a>
+        <button class="palette-trigger" type="button" data-palette-open aria-label="Search the site"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Search<kbd>Ctrl K</kbd></button>
       </div>
     </nav>
   </header>
 
   <main id="main">
-    <section class="hero shell" id="top">
+    <section class="hero-band" id="top">
+      <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="hero shell">
       <div class="hero-copy reveal">
-        <p class="eyebrow"><span></span> Versionless rolling framework</p>
-        <h1>One stack.<br><em>Complete applications.</em></h1>
+        <p class="eyebrow"><span></span> 5+ years in development · versionless rolling main</p>
+        <h1 data-decode>One stack.<br><em>Complete applications.</em></h1>
         <p class="hero-lede">MyStack brings routing, data, security, UI, a self-contained browser runtime, integrations, observability and intelligent tooling into one portable PHP framework.</p>
         <div class="hero-actions">
           <a class="button primary" href="docs/">Explore the documentation</a>
@@ -66,12 +72,13 @@
         <ul class="hero-facts" aria-label="Framework highlights">
           <li><strong>30</strong><span>core libraries</span></li>
           <li><strong>0</strong><span>Composer dependencies</span></li>
-          <li><strong>844+</strong><span>public methods</span></li>
+          <li><strong>918+</strong><span>public methods</span></li>
+          <li><strong>5+</strong><span>years in testing</span></li>
         </ul>
       </div>
-      <div class="terminal reveal" data-tilt aria-label="MyStack bootstrap example">
-        <div class="terminal-bar"><span></span><span></span><span></span><b>index.php</b></div>
-        <pre><code><span class="dim">&lt;?php</span>
+      <div class="terminal reveal" data-tilt data-terminal aria-label="MyStack bootstrap example">
+        <div class="terminal-bar"><span></span><span></span><span></span><b data-terminal-file>index.php</b></div>
+        <pre><code data-terminal-code><span class="dim">&lt;?php</span>
 <span class="pink">require_once</span> <span class="green">'library/library.php'</span>;
 
 <span class="blue">PHDE</span>::debug(<span class="pink">false</span>);
@@ -85,25 +92,62 @@
 <span class="blue">PHRO</span>::listen();</code></pre>
         <div class="terminal-status"><span></span> Portable from root domain to nested folder</div>
       </div>
+      </div>
     </section>
 
     <section class="section shell" id="extension">
       <div class="extension-card reveal">
-        <div class="extension-visual" aria-hidden="true"><span class="extension-window"><i></i><i></i><i></i><b>M</b></span></div>
-        <div class="extension-copy"><p class="eyebrow">Official developer companion</p><h2>MyStack Framework Helper</h2><p>The official VS Code extension brings source-derived PHP stubs, thousands of framework snippets, command discovery, diagnostics and MyStack CLI actions directly into the editor—with workspace-trust and safe-path protections.</p><ul class="extension-points"><li>Source-derived framework intelligence</li><li>Cross-platform MyStack CLI workflow</li><li>Trusted-workspace safety</li><li>No telemetry or automatic network activity</li></ul><div class="hero-actions"><a class="button primary" href="https://github.com/mystack-framework/mystack-extension">Explore the extension</a><a class="button secondary" href="https://github.com/mystack-framework/mystack-extension#readme">Read extension docs</a></div></div>
+        <div class="extension-visual" aria-hidden="true"><span class="extension-window"><i></i><i></i><i></i><b><img src="icon.png" alt=""></b></span></div>
+        <div class="extension-copy"><p class="eyebrow">Official developer companion</p><h2>MyStack Framework Helper</h2><p>The official VS Code extension brings source-derived PHP stubs, 4,700+ framework snippets, command discovery, diagnostics and eleven MyStack CLI actions directly into the editor—with workspace-trust and safe-path protections.</p><ul class="extension-points"><li>Source-derived framework intelligence</li><li>Cross-platform MyStack CLI workflow</li><li>Trusted-workspace safety</li><li>No telemetry or automatic network activity</li></ul><div class="hero-actions"><a class="button primary" href="https://github.com/mystack-framework/mystack-extension">Explore the extension</a><a class="button secondary" href="https://github.com/mystack-framework/mystack-extension#readme">Read extension docs</a></div></div>
       </div>
     </section>
 
     <section class="trust-strip" aria-label="Core principles">
-      <div class="shell"><span>Zero-Composer core</span><span>Source-verified docs</span><span>Secure defaults</span><span>AI-readable</span><span>Apache-2.0</span></div>
+      <div class="shell"><span>5+ years in development</span><span>Zero-Composer core</span><span>Source-verified docs</span><span>Secure defaults</span><span>AI &amp; bots welcome</span><span>Apache-2.0</span></div>
+    </section>
+
+    <section class="marquee-wrap" aria-label="Supported integrations and technologies">
+      <div class="marquee"><div class="marquee-track" data-marquee>
+        <span>bKash</span><span>Nagad</span><span>SSLCommerz</span><span>Aamarpay</span><span>SurjoPay</span><span>Stripe</span><span>PayPal</span><span>Razorpay</span><span>Square</span><span>Adyen</span><span>Mollie</span><span>MySQL</span><span>MariaDB</span><span>SQLite</span><span>PostgreSQL</span><span>OpenAI</span><span>Gemini</span><span>Anthropic</span><span>MCP</span><span>ntfy</span><span>Web Push</span><span>WebSocket</span><span>SSE</span><span>SMTP</span><span>IMAP</span><span>OAuth 2.0</span><span>OIDC</span><span>TOTP</span><span>JWT</span><span>AES-GCM</span>
+      </div></div>
+    </section>
+
+    <section class="section shell" id="story">
+      <div class="section-heading reveal"><p class="eyebrow">The long game</p><h2>Developed and tested<br>for 5+ years.</h2><p>MyStack has been under continuous development and real-world testing for 5+ years. Every change to the official <code>main</code> branch passes the same 64-check regression suite, a read-only production audit and byte-exact update verification — so the framework you copy today carries years of accumulated fixes, hardening and polish from day one.</p></div>
+      <div class="stats-band reveal" aria-label="Verified framework metrics">
+        <div><strong>5+</strong><span>years of development &amp; testing</span></div>
+        <div><strong>64</strong><span>automated smoke checks</span></div>
+        <div><strong>84</strong><span>CLI commands</span></div>
+        <div><strong>3,523</strong><span>UI components</span></div>
+        <div><strong>4,722</strong><span>editor snippets</span></div>
+        <div><strong>0</strong><span>third-party dependencies</span></div>
+      </div>
+    </section>
+
+    <section class="section shell" id="proof">
+      <div class="section-heading reveal"><p class="eyebrow">Proof, not promises</p><h2>The suite that ships<br>with the framework.</h2><p>Every line below is a real check from <code>php mystack smoke</code> — the same 64 checks that gate every official update before it reaches <code>main</code>.</p></div>
+      <div class="smoke-terminal reveal">
+        <div class="smoke-bar"><i></i><i></i><i></i><b>php mystack smoke</b><button type="button" data-smoke-rerun>Run again</button></div>
+        <div class="smoke-lines" data-smoke-lines aria-live="polite"></div>
+      </div>
     </section>
 
     <section class="architecture shell reveal" aria-labelledby="architecture-title">
       <div class="architecture-copy"><p class="eyebrow">One connected runtime</p><h2 id="architecture-title">Every layer speaks<br>the same language.</h2><p>Portable paths, shared security boundaries and a consistent API style connect the server, browser, data and operational layers.</p><a class="text-link" href="docs/">Explore the architecture <span>→</span></a></div>
-      <div class="stack-orbit" aria-label="MyStack architecture layers">
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
-        <div class="stack-core"><span>M</span><b>MyStack</b></div>
-        <span class="orbit-node node-server">Server</span><span class="orbit-node node-ui">Interface</span><span class="orbit-node node-data">Data</span><span class="orbit-node node-ops">Operations</span>
+      <div class="stack-orbit" aria-label="MyStack request flow diagram">
+        <svg class="flow" viewBox="0 0 560 300" role="img" aria-label="A request travels from the browser through PHRO, guard, controller, PHDB, PHML and the PHJS runtime to the DOM">
+          <path class="flow-line" d="M70,60 H490 V220 H70"/>
+          <circle class="flow-dot" r="6"><animateMotion dur="7s" repeatCount="indefinite" path="M70,60 H490 V220 H70"/></circle>
+          <circle class="flow-dot flow-dot-2" r="4"><animateMotion dur="7s" begin="3.5s" repeatCount="indefinite" path="M70,60 H490 V220 H70"/></circle>
+          <g class="flow-node"><title>Visitor's browser</title><rect x="12" y="38" width="116" height="44" rx="12"/><text x="70" y="65">Browser</text></g>
+          <g class="flow-node"><title>Routing, middleware, dispatch</title><rect x="152" y="38" width="116" height="44" rx="12"/><text x="210" y="65">PHRO</text></g>
+          <g class="flow-node"><title>CSRF + ten request shields</title><rect x="292" y="38" width="116" height="44" rx="12"/><text x="350" y="65">Guard</text></g>
+          <g class="flow-node"><title>Your flat app/ classes</title><rect x="432" y="38" width="116" height="44" rx="12"/><text x="490" y="65">Controller</text></g>
+          <g class="flow-node"><title>Prepared queries, transactions, streaming</title><rect x="432" y="198" width="116" height="44" rx="12"/><text x="490" y="225">PHDB</text></g>
+          <g class="flow-node"><title>Composition, PHCS CSS, auto assets</title><rect x="292" y="198" width="116" height="44" rx="12"/><text x="350" y="225">PHML</text></g>
+          <g class="flow-node"><title>Self-contained PHJS runtime</title><rect x="152" y="198" width="116" height="44" rx="12"/><text x="210" y="225">/app.js</text></g>
+          <g class="flow-node"><title>Interactive page — no build step</title><rect x="12" y="198" width="116" height="44" rx="12"/><text x="70" y="225">DOM</text></g>
+        </svg>
       </div>
     </section>
 
@@ -119,6 +163,56 @@
       </div>
     </section>
 
+    <section class="section shell" id="easy">
+      <div class="workflow-grid">
+        <div class="section-heading sticky reveal"><p class="eyebrow">Deliberately simple</p><h2>Copy it.<br>Configure it.<br>Ship it.</h2><p>No package manager, no build pipeline, no config sprawl. The whole framework is one folder you already know how to deploy — and one command proves it is healthy.</p></div>
+        <ol class="steps">
+          <li class="reveal"><span>01</span><div><h3>Copy</h3><p>Drop the project folder on any Apache/LiteSpeed host — domain root, subdomain or nested subfolder.</p><code>library/ + index.php</code></div></li>
+          <li class="reveal"><span>02</span><div><h3>Configure</h3><p>One bootstrap file: debug, guard, keys, database. Plain PHP — no YAML archaeology.</p><code>PHRO::guard(); PHRO::key('…');</code></div></li>
+          <li class="reveal"><span>03</span><div><h3>Build</h3><p>Routes, views, components and APIs in the same voice. First page in nine lines.</p><code>PHRO::get('/', fn() =&gt; PHUI::page('landing'));</code></div></li>
+          <li class="reveal"><span>04</span><div><h3>Verify</h3><p>One command runs the full regression suite before you ship.</p><code>php mystack smoke</code></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section shell" id="demo">
+      <div class="section-heading reveal"><p class="eyebrow">Try it right here</p><h2>Declarative UI,<br>no framework.</h2><p>This is exactly how PHJS behaves on a MyStack page — the buttons below run the same pattern, in a dozen lines of vanilla JS.</p></div>
+      <div class="demo-grid reveal">
+        <div class="demo-code"><pre><code>&lt;button x-on:click="toast 'Saved'"&gt;Save&lt;/button&gt;
+&lt;button x-on:click="toggle #panel"&gt;Panel&lt;/button&gt;
+&lt;button x-on:click="set counter + 1"&gt;Count&lt;/button&gt;</code></pre></div>
+        <div class="demo-play">
+          <div class="hero-actions" style="justify-content:flex-start">
+            <button class="button primary" type="button" data-demo-toast>Show toast</button>
+            <button class="button secondary" type="button" data-demo-toggle>Toggle panel</button>
+            <button class="button secondary" type="button" data-demo-count>Count: <b data-demo-num>0</b></button>
+          </div>
+          <div class="demo-panel" data-demo-panel hidden><p>The panel toggled without a framework, a build step or a single line of page JS. That is PHJS.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="compare">
+      <div class="section-heading reveal"><p class="eyebrow">Straight comparison</p><h2>The usual stack,<br>minus the stack.</h2><p>No vendor folder, no lockfile, no build pipeline, no integration glue — the same capabilities, one coherent codebase.</p></div>
+      <div class="compare-wrap reveal">
+        <table class="compare">
+          <thead><tr><th scope="col"></th><th scope="col">Typical modern stack</th><th scope="col">MyStack</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Dependencies</th><td>40+ Composer packages and their transitive tree</td><td>Zero runtime dependencies</td></tr>
+            <tr><th scope="row">Install</th><td><code>composer install</code>, network, lockfile drift</td><td>Copy the folder. Done.</td></tr>
+            <tr><th scope="row">Frontend build</th><td>Node + bundler for CSS and JS</td><td>None — PHCS and PHJS compile in PHP</td></tr>
+            <tr><th scope="row">SPA runtime</th><td>React, Vue or Alpine plus state glue</td><td>Self-contained PHJS, no external framework</td></tr>
+            <tr><th scope="row">UI kit</th><td>Separate component library + theme wiring</td><td>3,523-entry PHUI with theme tokens built in</td></tr>
+            <tr><th scope="row">Queue &amp; scheduler</th><td>Redis + supervisor + worker package</td><td>Built-in SQLite queue, retry/backoff, scheduler</td></tr>
+            <tr><th scope="row">BD payments &amp; couriers</th><td>Hand-rolled per-gateway SDKs</td><td>Capability-checked facades, 10 BD gateways + 10 couriers</td></tr>
+            <tr><th scope="row">Web Push</th><td>Firebase SDK or ntfy wrapper</td><td>Built-in ntfy + self-contained VAPID</td></tr>
+            <tr><th scope="row">Monitoring</th><td>Logging package + metrics exporter</td><td>PHMO: trace IDs, JSON logs, /health, /ready, metrics</td></tr>
+            <tr><th scope="row">Documentation</th><td>Hand-written, quietly drifts</td><td>Generated from source, hash-verified, AI-readable</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
     <section class="section library-section" id="libraries">
       <div class="shell">
         <div class="section-heading reveal"><p class="eyebrow">The library system</p><h2>Thirty focused modules.<br>One consistent mental model.</h2></div>
@@ -126,6 +220,19 @@
         <div class="library-grid" data-library-grid></div>
         <p class="no-results" data-no-results hidden>No matching library found.</p>
         <div class="center"><a class="button secondary" href="docs/">Search all public APIs</a></div>
+      </div>
+    </section>
+
+    <section class="section shell" id="catalog">
+      <div class="section-heading reveal"><p class="eyebrow">Ask the catalog</p><h2>Real signatures,<br>zero guessing.</h2><p>Type a class, method or capability — the answer comes straight from <code>docs/api.json</code>, machine-indexed from the current executable source. The same catalog AI assistants use to verify instead of invent.</p></div>
+      <div class="catalog-box reveal">
+        <label class="catalog-search" for="catalog-input">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="catalog-input" type="search" placeholder="Try PHRO::get, PHDB::insert, totp, oauth…" autocomplete="off" data-catalog-input>
+        </label>
+        <div class="catalog-chips" data-catalog-chips></div>
+        <div class="catalog-results" data-catalog-results aria-live="polite"></div>
+        <p class="catalog-note" data-catalog-note hidden>Live search needs the site to be served over HTTP — open it from mystack-framework.github.io.</p>
       </div>
     </section>
 
@@ -144,7 +251,26 @@
     <section class="section shell">
       <div class="callout reveal">
         <div><p class="eyebrow">Built for humans and AI</p><h2>Documentation that follows the source.</h2><p>Every public signature is derived from the current framework files. The portal, API catalog, per-library references and LLM discovery files stay synchronized.</p></div>
-        <div class="callout-links"><a href="docs/">Documentation portal <span>→</span></a><a href="docs/api.json">API catalog (JSON) <span>→</span></a><a href="llms.txt">AI overview <span>→</span></a><a href="llms-full.txt">Complete AI reference <span>→</span></a></div>
+        <div class="callout-links"><a href="docs/">Documentation portal <span>→</span></a><a href="docs/api.json">API catalog (JSON) <span>→</span></a><a href="llms.txt">AI overview <span>→</span></a><a href="llms-full.txt">Complete AI reference <span>→</span></a><a href="https://github.com/mystack-framework/mystack/blob/main/MANUAL_EN.md">English manual <span>→</span></a><a href="https://github.com/mystack-framework/mystack/blob/main/MANUAL_BN.md">বাংলা ম্যানুয়াল <span>→</span></a></div>
+      </div>
+    </section>
+
+    <section class="section shell">
+      <div class="callout reveal">
+        <div><p class="eyebrow">Open to machines</p><h2>Every search engine, every AI, every bot — welcome.</h2><p>MyStack is built to be read by machines. <code>robots.txt</code> allows all crawlers and explicitly welcomes AI assistants, <code>llms.txt</code> and <code>llms-full.txt</code> carry the complete source-verified context, and <code>docs/api.json</code> indexes all 918 public methods with real signatures. Cite the API — never guess it.</p></div>
+        <div class="callout-links"><a href="robots.txt">Robots policy <span>→</span></a><a href="llms.txt">llms.txt <span>→</span></a><a href="llms-full.txt">llms-full.txt <span>→</span></a><a href="docs/api.json">api.json <span>→</span></a></div>
+      </div>
+    </section>
+
+    <section class="section shell" id="faq">
+      <div class="section-heading reveal"><p class="eyebrow">Quick answers</p><h2>Frequently asked questions.</h2></div>
+      <div class="feature-grid">
+        <article class="feature-card reveal"><span class="feature-index">?</span><h3>What is MyStack?</h3><p>A complete, zero-Composer PHP application framework: routing, security, database, UI, browser runtime, auth, payments, realtime, AI and observability in one folder.</p></article>
+        <article class="feature-card reveal"><span class="feature-index">?</span><h3>Do I need Composer or NPM?</h3><p>No. Zero runtime dependencies — no build step, no lockfiles, no transitive surprises. Ever.</p></article>
+        <article class="feature-card reveal"><span class="feature-index">?</span><h3>Will it run on shared hosting?</h3><p>Yes — that is the primary design target: cPanel/LiteSpeed, subfolder installs, portable paths and an <code>.htaccess</code> guard.</p></article>
+        <article class="feature-card reveal"><span class="feature-index">?</span><h3>Is it free for commercial use?</h3><p>Yes — Apache License 2.0 for the framework, MIT for the VS Code extension. Preserve the license and NOTICE, identify modifications.</p></article>
+        <article class="feature-card reveal"><span class="feature-index">?</span><h3>Who maintains it?</h3><p>Sakibur Rahman (<code>sakibweb</code>) — 5+ years of continuous development and testing, with full manuals in Bangla and English.</p></article>
+        <article class="feature-card reveal"><span class="feature-index">?</span><h3>Can AI tools use it safely?</h3><p>Yes — every public signature is machine-indexed from source, all AI crawlers are explicitly allowed, and the agent contract forbids invented APIs.</p></article>
       </div>
     </section>
 
@@ -155,9 +281,20 @@
   </main>
 
   <footer>
-    <div class="shell footer-grid"><div><a class="brand" href="#top"><span class="brand-mark">M</span><span>MyStack</span></a><p>A versionless, rolling PHP application framework maintained by Sakibur Rahman (sakibweb).</p></div><div><h2>Framework</h2><a href="#capabilities">Capabilities</a><a href="#libraries">Libraries</a><a href="docs/">Documentation</a></div><div><h2>Project</h2><a href="https://github.com/mystack-framework">Organization</a><a href="https://github.com/mystack-framework/mystack">Framework repository</a><a href="https://github.com/mystack-framework/mystack-extension">Official extension</a><a href="https://github.com/mystack-framework/mystack/blob/main/CONTRIBUTING.md">Contributing</a></div><div><h2>Legal</h2><a href="https://github.com/mystack-framework/mystack/blob/main/LICENSE">Apache License 2.0</a><a href="https://github.com/mystack-framework/mystack/blob/main/NOTICE">Notice</a><a href="https://github.com/mystack-framework/mystack/security">Security</a></div></div>
+    <div class="shell footer-grid"><div><a class="brand" href="#top"><span class="brand-mark"><img src="icon.png" alt=""></span><span>MyStack</span></a><p>A versionless, rolling PHP application framework maintained by Sakibur Rahman (sakibweb).</p></div><div><h2>Framework</h2><a href="#capabilities">Capabilities</a><a href="#libraries">Libraries</a><a href="docs/">Documentation</a><a href="https://github.com/mystack-framework/mystack/blob/main/MANUAL_EN.md">English manual</a><a href="https://github.com/mystack-framework/mystack/blob/main/MANUAL_BN.md">বাংলা ম্যানুয়াল</a></div><div><h2>Project</h2><a href="https://github.com/mystack-framework">Organization</a><a href="https://github.com/mystack-framework/mystack">Framework repository</a><a href="https://github.com/mystack-framework/mystack-extension">Official extension</a><a href="https://github.com/mystack-framework/mystack/blob/main/CONTRIBUTING.md">Contributing</a></div><div><h2>Legal</h2><a href="https://github.com/mystack-framework/mystack/blob/main/LICENSE">Apache License 2.0</a><a href="https://github.com/mystack-framework/mystack/blob/main/NOTICE">Notice</a><a href="https://github.com/mystack-framework/mystack/security">Security</a></div></div>
     <div class="shell footer-bottom"><span>© <span data-year></span> Sakibur Rahman. MyStack Framework.</span><span>No fixed framework version · rolling official main</span></div>
   </footer>
+  <nav class="spy" aria-label="Section navigation" data-spy></nav>
+  <div class="palette-overlay" data-palette hidden>
+    <div class="palette" role="dialog" aria-modal="true" aria-label="Search MyStack">
+      <div class="palette-input">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" placeholder="Search sections, libraries, commands…" data-palette-input autocomplete="off" spellcheck="false">
+        <kbd>Esc</kbd>
+      </div>
+      <div class="palette-list" role="listbox" data-palette-list></div>
+    </div>
+  </div>
   <button class="back-top" type="button" data-back-top aria-label="Back to top">↑</button>
 </body>
 </html>

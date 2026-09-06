@@ -7,10 +7,14 @@ The website represents MyStack as a versionless framework following the rolling 
 ## Contents
 
 - Responsive, accessible framework landing page
+- 5+ year development story, verified metrics band, quick-start steps and FAQ with `FAQPage` structured data
 - Searchable core-library catalog
 - Source-generated documentation portal under `docs/`
 - AI discovery files: `llms.txt` and `llms-full.txt`
 - Search discovery through `robots.txt`, `sitemap.xml`, canonical metadata and structured data
+- Explicit all-crawler policy: every search engine, AI assistant and bot is allowed by name in `robots.txt`
+- Static-site build opt-out through `.nojekyll` (raw `docs/*.md` and JSON must stay byte-exact)
+- Coordinated disclosure pointer through `.well-known/security.txt`
 - Branded Open Graph/X social preview under `assets/`
 - Responsive motion, touch navigation, keyboard access and reduced-motion support
 - Install metadata through `site.webmanifest`
